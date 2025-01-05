@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharv's Single File Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        header {
+            background-color: #1e90ff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #1e90ff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        footer {
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Atharv's Website!</h1>
+    </header>
+    <section id="home" class="active">
+        <h2>Subjects and Topics</h2>
+        <table>
+            <tr>
+                <th>Subject Name</th>
+                <th>Topic</th>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="showSection('english')">English</a></td>
+                <td>Exploring the life and work of Ila Sachani.</td>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="showSection('math')">Math</a></td>
+                <td>Research and create an A4 chart on Indian mathematicians like Aryabhata, Brahmagupta, or Srinivasa Ramanujan.</td>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="showSection('science')">Science</a></td>
+                <td>Study India's satellite technology contribution with examples like GSAT or NAVIC.</td>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="showSection('sst')">S.ST</a></td>
+                <td>Explain why people traveled to India in ancient times (trade, culture, learning, etc.).</td>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="showSection('hindi')">Hindi</a></td>
+                <td>India as a country in the Indian Ocean.</td>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="showSection('marathi')">Marathi</a></td>
+                <td>Information about the water pollution.</td>
+            </tr>
+            <tr>
+                <td><a href="#" onclick="showSection('art')">Art</a></td>
+                <td>Any style of Indian art.</td>
+            </tr>
+        </table>
+    </section>
+    <section id="english">
+        <h2>English</h2>
+        <p>Exploring the life and work of Ila Sachani: Ila Sachani is an inspiring figure known for her contributions to literature and social causes...</p>
+        <button onclick="showSection('home')">Back</button>
+    </section>
+    <section id="math">
+        <h2>Math</h2>
+        <p>Research on Indian mathematicians like Aryabhata, Brahmagupta, and Srinivasa Ramanujan highlights their contributions to algebra, geometry, and number theory...</p>
+        <button onclick="showSection('home')">Back</button>
+    </section>
+    <section id="science">
+        <h2>Science</h2>
+        <p>India's contribution to satellite technology includes GSAT, which aids in communication, and NAVIC, India's regional GPS system...</p>
+        <button onclick="showSection('home')">Back</button>
+    </section>
+    <section id="sst">
+        <h2>S.ST</h2>
+        <p>People traveled to India in ancient times for trade, culture, and learning. Routes connected India with the world, fostering exchanges in goods and ideas...</p>
+        <button onclick="showSection('home')">Back</button>
+    </section>
+    <section id="hindi">
+        <h2>Hindi</h2>
+        <p>India as a country in the Indian Ocean plays a vital role in connecting East and West through trade and culture...</p>
+        <button onclick="showSection('home')">Back</button>
+    </section>
+    <section id="marathi">
+        <h2>Marathi</h2>
+        <p>Information about water pollution: Water pollution adversely affects health, ecosystems, and economic activities...</p>
+        <button onclick="showSection('home')">Back</button>
+    </section>
+    <section id="art">
+        <h2>Art</h2>
+        <p>Indian art is diverse, ranging from ancient murals to modern art forms, showcasing the rich cultural heritage of the country...</p>
+        <button onclick="showSection('home')">Back</button>
+    </section>
+    <footer>
+        <p>&copy; 2025 Atharv's Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
